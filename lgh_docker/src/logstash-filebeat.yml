@@ -1,0 +1,15 @@
+input {
+  beats {
+    port => 5044
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["es1.lexisnexis.cn:9200"]
+    index => "%{[fields][log_source]}-%{[@metadata][version]}-%{+YYYY.MM.dd}" 
+    # 通过测试得到，%{[fields][log_source]}-%{[@metadata][version]}-%{+YYYY.MM.dd}格式是固定的
+    #index => "%{[fields][log_source]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
+    #    ##index => "%{[@tags]-%{[@metadata][version]}-%{+YYYY.MM.dd}"
+    }
+}
