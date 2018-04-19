@@ -7,6 +7,7 @@ filebeat.prospectors:
   fields:
     log_source: 31-system
   tags: 31-system-log
+  include_lines: ['^ERR', '^WARN', 'ERR', 'WARN', 'error', 'fault', 'failed', 'reboot', 'shutdown', 'disconnect', 'refused', 'not found']
 - type: log
   enabled: true
   paths:
