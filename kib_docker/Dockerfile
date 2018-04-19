@@ -31,7 +31,7 @@ ENV PATH=$PATH:$KIBANA_HOME/bin
 ADD src/init.sh /home/kibana/
 RUN chmod +x /home/kibana/init.sh
 RUN echo "server.host: "0.0.0.0"" >> /home/kibana/kibana-6.2.3-linux-x86_64/config/kibana.yml
-RUN echo "elasticsearch.url: "http://es1.lexisnexis.cn:9200"" >> /home/kibana/kibana-6.2.3-linux-x86_64/config/kibana.yml
+RUN echo "elasticsearch.url: "http://es1.XX.cn:9200"" >> /home/kibana/kibana-6.2.3-linux-x86_64/config/kibana.yml
 RUN echo "logging.quiet: true" >> /home/kibana/kibana-6.2.3-linux-x86_64/config/kibana.yml
 RUN chown -R kibana:kibana /home/kibana
 
