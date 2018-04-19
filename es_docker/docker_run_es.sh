@@ -8,9 +8,9 @@ docker run -it \
     --restart=always \
     -e TZ=Asia/Hong_Kong \
     -d \
-    --add-host "es1.lexisnexis.cn:192.168.2.111" \
-    --add-host "lgh1.lexisnexis.cn:192.168.2.111" \
-    --add-host "kib1.lexisnexis.cn:192.168.2.111" \
+    --add-host "es1.XX.cn:192.168.2.111" \
+    --add-host "lgh1.XX.cn:192.168.2.111" \
+    --add-host "kib1.XX.cn:192.168.2.111" \
     --ulimit nofile=65536:65536 \
     --ulimit nproc=4096:4096 \
     -v /data/esdata:/home/es/elasticsearch-6.2.3/data \
