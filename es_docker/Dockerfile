@@ -49,6 +49,7 @@ RUN echo "es hard nofile 65536" >> /etc/security/limits.conf
 RUN echo "es soft nproc 2048" >> /etc/security/limits.d/90-nproc.conf
 RUN echo "bootstrap.memory_lock: false" >> /home/es/elasticsearch-6.2.3/config/elasticsearch.yml
 RUN echo "bootstrap.system_call_filter: false" >> /home/es/elasticsearch-6.2.3/config/elasticsearch.yml
+RUN echo "cluster.routing.allocation.disk.threshold_enabled: false" >> /home/es/elasticsearch-6.2.4/config/elasticsearch.yml
 ENV vm.max_map_count = 262144
 
 RUN echo "session required /lib64/security/pam_limits.so" >> /etc/pam.d/login
